@@ -1,0 +1,165 @@
+body {
+  margin: 0 20px;
+  color: rgb(102, 102, 102);
+  line-height: 2em;
+}
+
+body p {
+  margin: 0 20px 15px 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  margin: 35px 0;
+}
+
+.logo img{
+  width: 400px;
+  height: 40px;
+  vertical-align: bottom;
+  margin-bottom: 35px;
+}
+
+.mainimg img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  display: block;
+  color: rgb(102, 102, 102);
+  width: 120px;
+  line-height: 60px;
+  position: relative;
+}
+
+.btn:hover {
+  color: rgb(224, 128, 67);
+}
+
+.btn::after {
+  position: absolute;
+  bottom: 2px;/* 下線の動き始めの位置 */
+  left: 5px;/* 下線の左端の位置 */
+  content: '';/* これがないと下線が表示されない */
+  width: 110px;/* 線の幅 */
+  height: 2px;/* 線の太さ */
+  background: rgb(224, 128, 67);/* 線の色 */
+  opacity: 0;/* 下線の動き始めの透明度 */
+  visibility: hidden;/* 下線の非表示 */
+  transition: .3s;/* 下線の動きの速さ */
+}
+
+.btn:hover::after {
+  bottom: -2px;/* 下線のhover時の位置 */
+  opacity: 1;/* 下線の動きhover時の透明度 */
+  visibility: visible;/* 下線をhover時に表示 */
+}
+
+h2 {
+  /* text-align: start; */
+  background: rgb(224, 128, 67);
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 50px;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.content {
+  margin-bottom: 30px;
+}
+
+dl {
+  margin: 0 20px;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+}
+
+dd {
+  padding-left: 5em;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(102, 102, 102);
+  line-height: 50px;
+  padding: 0 20px;
+  border: solid 1px rgb(204, 204, 204);
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+p strong {
+  color: rgb(224, 128, 67);
+}
+
+a {
+  color: rgb(102, 102, 102);
+}
+
+a:hover {
+  color: rgb(224, 128, 67);
+}
+
+footer {
+  margin: 40px 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* small screen */
+@media (max-width: 580px) {
+  body {
+    line-height: 1.5em;
+  }
+
+  .logo img {
+    max-width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100px;
+    line-height: 40px;
+  }
+
+  .btn::after {
+    left: 5px;/* 下線の左端の位置 */
+    width: 90px;/* 線の幅 */
+  }
+
+  section, h2, h3 {
+    font-size: 12px;
+  }
+
+  h2, h3 {
+    line-height: 40px;
+  }
+}
